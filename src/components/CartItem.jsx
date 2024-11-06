@@ -18,7 +18,7 @@ function CartItem({ item, removeFromCart, updateQuantity }) {
             <p className='cart-item-qantity'>{item.quantity}</p>
             <button className='cart-count-btns' onClick={() => updateQuantity(item.id, item.size, 1)}>+</button>
           </div>
-          <button className='cart-item-delete' onClick={() => removeFromCart(item.id, item.size)}><img src='./src/assets/trash.png'></img></button>
+          <button className='cart-item-delete' onClick={() => removeFromCart(item.id, item.size)}><img src='./public/trash.png'></img></button>
         </div>
       </div>
     </div>

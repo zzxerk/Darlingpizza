@@ -42,7 +42,7 @@ function Main() {
         <div className="container">
           <div className="header-top">
             <span className='logo-link'>Darling pizza</span>
-            <button className='cart-btn' onClick={() => setIsCartOpen(true)}><img src="./src/assets/cart.png" alt="" />Корзина</button>
+            <button className='cart-btn' onClick={() => setIsCartOpen(true)}><img src="./public/cart.png" alt=""/>Корзина</button>
           </div>
           <div className="header-btm">
                     <div className="header-btm-body">
