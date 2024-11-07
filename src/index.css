@@ -9,7 +9,7 @@
 
 html {
   /* touch-action: manipulation; */
-  touch-action: pinch-zoom;
+  touch-action: none;
 }
 
 body {
