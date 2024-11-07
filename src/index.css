@@ -16,6 +16,7 @@ body {
   height: 2000px;
   color: #000;
   /* touch-action: manipulation; */
+  touch-action: pan-y;
 }
 
 .container {
