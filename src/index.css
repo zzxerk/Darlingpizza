@@ -8,13 +8,13 @@
 }
 
 html {
-  touch-action: none;
+  /* touch-action: cross-slide-y; */
 }
 
 body {
   height: 2000px;
   color: #000;
-  touch-action: none;
+  /* touch-action: cross-slide-y; */
 }
 
 .container {
