@@ -7,7 +7,7 @@ function CartItem({ item, removeFromCart, updateQuantity }) {
         <img className='cart-box-img' src={item.imageUrl} alt={item.name}/>
         <div className="cart-box-text">
           <span className='cart-item-name'>{item.name}</span>
-          <span className='cart-item-size'>{item.size} см</span>
+          <span className='cart-item-size'>{item.size} см, {item.doughType === "traditional" ? "традиционное" : "тонкое"} тесто</span>
         </div>
       </div>
       <div className="cart-item-count">
