@@ -442,6 +442,7 @@ header {
 
 .dough-options button {
   width: 100%;
+  color: #000;
   height: 28px;
   background-color: #F5F5F5;
   border: none;
