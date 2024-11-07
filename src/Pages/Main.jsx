@@ -41,7 +41,7 @@ function Main() {
       <header>
         <div className="container">
           <div className="header-top">
-            <span className='logo-link'>Darling pizza</span>
+            <a href='https://darlingpizza.vercel.app/' className='logo-link'>Darling pizza</a>
             <button className='cart-btn' onClick={() => setIsCartOpen(true)}><img className='icon-img' src="cart.png" alt=""/>Корзина</button>
           </div>
           <div className="header-btm">
