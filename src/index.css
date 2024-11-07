@@ -7,9 +7,14 @@
   font-family: "Nunito", sans-serif;
 }
 
+html {
+  touch-action: none;
+}
+
 body {
   height: 2000px;
   color: #000;
+  touch-action: none;
 }
 
 .container {
