@@ -8,13 +8,14 @@
 }
 
 html {
-  touch-action: manipulation;
+  /* touch-action: manipulation; */
+  touch-action: pinch-zoom;
 }
 
 body {
   height: 2000px;
   color: #000;
-  touch-action: manipulation;
+  /* touch-action: manipulation; */
 }
 
 .container {
