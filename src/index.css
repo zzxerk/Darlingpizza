@@ -9,14 +9,14 @@
 
 html {
   /* touch-action: manipulation; */
-  touch-action: none;
+  touch-action: pan-y;
 }
 
 body {
   height: 2000px;
   color: #000;
   /* touch-action: manipulation; */
-  touch-action: pan-y;
+  touch-action: none;
 }
 
 .container {
