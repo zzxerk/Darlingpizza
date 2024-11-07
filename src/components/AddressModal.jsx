@@ -43,7 +43,7 @@ const AddressModal = ({ onClose, onConfirm }) => {
       <div className="container">
         <div className="modal-body">
           <button className="cart-modal-close" onClick={onClose}>×</button>
-          <span className='cart-title'>Новый адрес</span>
+          <span className='cart-title'>Адрес доставки</span>
           <div className="adres-body">
 
             <input
@@ -104,7 +104,7 @@ const AddressModal = ({ onClose, onConfirm }) => {
               onChange={handleChange}
             />
           </div>
-          <button className="add-to-cart-button" onClick={handleConfirm}>Добавить</button>
+          <button className="add-to-cart-button" onClick={handleConfirm}>Сохранить</button>
         </div>
       </div>
     </div>

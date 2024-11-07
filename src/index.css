@@ -499,6 +499,7 @@ header {
 .adres-input {
   width: 100%;
   height: 52px;
+  font-size: 14px;
   border-radius: 10px;
   padding-left: 14px;
   background-color: #F5F5F5;
@@ -513,6 +514,7 @@ header {
 .adres-input-short {
   width: 152px;
   height: 52px;
+  font-size: 14px;
   border-radius: 10px;
   padding-left: 14px;
   background-color: #F5F5F5;
