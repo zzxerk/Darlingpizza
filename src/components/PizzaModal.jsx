@@ -55,7 +55,7 @@ function PizzaModal({ pizza, onClose, addToCart }) {
                   className={size === +s ? "active" : ""}
                   onClick={() => handleSizeChange(+s)}
                 >
-                  {s} 
+                  {s} см
                 </button>
               ))}
             </div>
