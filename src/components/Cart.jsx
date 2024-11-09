@@ -45,6 +45,12 @@ function Cart({ items, onClose, removeFromCart, updateQuantity }) {
               ))
             )}
           </div>
+          <input
+            className='cart-promo'
+            type="text"
+            placeholder='Промокод'
+            name='promo'
+          />
           <div className="cart-itog-body">
             <p>Сумма заказа</p>
             <p>{totalPrice} ₽</p>

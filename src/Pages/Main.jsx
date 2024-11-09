@@ -47,7 +47,7 @@ function Main() {
           <div className="header-btm">
                     <div className="header-btm-body">
                         <a className="header-btm-a" href="#pizza">Пиццы</a>
-                        <a className="header-btm-a" href="#">Завтраки</a>
+                        <a className="header-btm-a" href="#snack">Закуски</a>
                         <a className="header-btm-a" href="#">Десерты</a>
                         <a className="header-btm-a" href="#">Напитки</a>
                         <a className="header-btm-a" href="#">Соусы</a>
