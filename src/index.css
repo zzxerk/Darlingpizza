@@ -250,7 +250,8 @@ header {
   border: none;
   border-bottom: 1px solid #F3F3F7;
   outline: none;
-  margin-bottom: 10px;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
   border-radius: 0;
   width: 100%;
 }
