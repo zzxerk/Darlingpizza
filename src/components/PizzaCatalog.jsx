@@ -207,8 +207,8 @@ const snacks = [
     id: 17, 
     name: 'Куриные наггетсы', 
     description: 'Нежное куриное мясо в хрустящей панировке', 
-    sizes: { 4: 129, 8: 269}, 
-    basePrice: 129,
+    sizes: { 4: 89, 8: 169}, 
+    basePrice: 89,
     defaultDoughType: "",
     availableDoughTypes: [],
     imageUrl: 'https://media.dodostatic.net/image/r:1875x1875/11EEF45EACC4D7EABC10E0A0E0C2C67A.avif', 
@@ -219,8 +219,8 @@ const snacks = [
     id: 18, 
     name: 'Куриные кусочки', 
     description: 'Сочные кусочки цельного куриного филе с золотистой корочкой', 
-    sizes: {4: 129, 8: 269}, 
-    basePrice: 129,
+    sizes: {4: 89, 8: 169}, 
+    basePrice: 89,
     defaultDoughType: "",
     availableDoughTypes: [],
     imageUrl: 'https://media.dodostatic.net/image/r:1875x1875/11EE7D61B9521D369D61228456C8F6C9.avif', 
@@ -231,7 +231,7 @@ const snacks = [
     id: 19, 
     name: 'Куриные крылья барбекю', 
     description: 'Куриные крылышки со специями и ароматом копчения', 
-    sizes: {4: 169, 8: 329}, 
+    sizes: {4: 169, 8: 289}, 
     basePrice: 169,
     defaultDoughType: "",
     availableDoughTypes: [],
@@ -240,8 +240,6 @@ const snacks = [
     prefix: "шт"
   },
 ];
-
-const drinkVolume = 0.5;
 
 const drinks = [
   { 
