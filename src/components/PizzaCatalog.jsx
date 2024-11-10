@@ -5,6 +5,9 @@ import SnackItem from './SnackItem';
 import SnackModal from './SnackModal';
 import DrinkItem from './DrinkItem';
 import DrinkModal from './DrinkModal';
+import CardNumberInput from './CardNumberInput';
+import CardDateInput from './CardDateInput'
+import CvcInput from './CvcInput'
 
 
 const pizzaData = [
@@ -393,6 +396,13 @@ function PizzaCatalog({ addToCart }) {
               />
             )}
           </div>
+        </div>
+        <CardNumberInput />
+        <CardDateInput />
+        <CvcInput />
+        <div class="field">
+          <input class="field__input" id="login" placeholder />
+          <label class="field__label" for="login">Логин</label>
         </div>
       </div>
     </div>
