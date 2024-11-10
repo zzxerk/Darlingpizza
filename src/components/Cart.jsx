@@ -4,6 +4,7 @@ import AddressModal from './AddressModal';
 
 function Cart({ items, onClose, removeFromCart, updateQuantity }) {
   const [isAddressModalOpen, setIsAddressModalOpen] = useState(false);
+  const [promoCode, setPromoCode] = useState(''); // State to store the promo code
 
   const handleOpenAddressModal = () => {
     if (items.length > 0) {
@@ -20,7 +21,18 @@ function Cart({ items, onClose, removeFromCart, updateQuantity }) {
     setIsAddressModalOpen(false); // Close the modal after confirming the address
   };
 
-  const totalPrice = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const handlePromoCodeChange = (e) => {
+    setPromoCode(e.target.value);
+  };
+
+  const calculateTotalPrice = () => {
+    const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    return promoCode === 'FAMILY50' ? total * 0.5: total; // Apply 50% discount if promo code matches
+  };
+
+  // const totalPrice = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+   const totalPrice = calculateTotalPrice();
 
   return (
     <div className="modal">
@@ -50,6 +62,8 @@ function Cart({ items, onClose, removeFromCart, updateQuantity }) {
             type="text"
             placeholder='Промокод'
             name='promo'
+            value={promoCode}
+            onChange={handlePromoCodeChange}
           />
           <div className="cart-itog-body">
             <p>Сумма заказа</p>
@@ -77,3 +91,5 @@ function Cart({ items, onClose, removeFromCart, updateQuantity }) {
 }
 
 export default Cart;
+
+// 568
