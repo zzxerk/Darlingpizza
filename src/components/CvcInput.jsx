@@ -19,6 +19,7 @@ const CvcInput = () => {
         maxLength="3" // Limit to 3 digits
         className="cvc-input"
         placeholder
+        required
       />
       <label htmlFor="cvc" className="cvc-label">CVC/CVV</label>
     </div>

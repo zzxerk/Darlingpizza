@@ -1,10 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CartItem from './CartItem';
 import AddressModal from './AddressModal';
+import PaymentModal from './PaymentModal';
 
 function Cart({ items, onClose, removeFromCart, updateQuantity }) {
   const [isAddressModalOpen, setIsAddressModalOpen] = useState(false);
   const [promoCode, setPromoCode] = useState(''); // State to store the promo code
+  const [isPaymentModalOpen, setPaymentModalOpen] = useState(false);
+
+    useEffect(() => {
+    if (isAddressModalOpen || isPaymentModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    // Clean up when the component unmounts or modal closes
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isAddressModalOpen, isPaymentModalOpen]);
 
   const handleOpenAddressModal = () => {
     if (items.length > 0) {
@@ -19,6 +34,11 @@ function Cart({ items, onClose, removeFromCart, updateQuantity }) {
   const handleConfirmAddress = (address) => {
     console.log('Address confirmed:', address); // Send data to the database here
     setIsAddressModalOpen(false); // Close the modal after confirming the address
+    setPaymentModalOpen(true);
+  };
+
+  const handlePaymentClose = () => {
+    setPaymentModalOpen(false);
   };
 
   const handlePromoCodeChange = (e) => {
@@ -32,7 +52,7 @@ function Cart({ items, onClose, removeFromCart, updateQuantity }) {
 
   // const totalPrice = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-   const totalPrice = calculateTotalPrice();
+  const totalPrice = calculateTotalPrice();
 
   return (
     <div className="modal">
@@ -84,6 +104,13 @@ function Cart({ items, onClose, removeFromCart, updateQuantity }) {
               onConfirm={handleConfirmAddress}
             />
           )}
+          {isPaymentModalOpen && (
+            <PaymentModal
+              onClose={handlePaymentClose}
+              totalPrice={totalPrice}
+              onitems={items}
+            />
+          )}
         </div>
       </div>
     </div>
@@ -91,5 +118,3 @@ function Cart({ items, onClose, removeFromCart, updateQuantity }) {
 }
 
 export default Cart;
-
-// 568

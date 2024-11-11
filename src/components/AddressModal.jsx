@@ -22,7 +22,6 @@ const AddressModal = ({ onClose, onConfirm }) => {
     const newErrors = {};
     if (!address.city) newErrors.city = 'Введите данные';
     if (!address.entrance) newErrors.entrance = 'Введите номер подъезда';
-    // if (!address.doorCode) newErrors.doorCode = 'Введите код двери';
     if (!address.floor) newErrors.floor = 'Введите этаж';
     if (!address.apartment) newErrors.apartment = 'Введите номер квартиры';
     return newErrors;
@@ -33,8 +32,8 @@ const AddressModal = ({ onClose, onConfirm }) => {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors); // Show errors if validation fails
     } else {
-      onConfirm(address); // Pass address data to parent component
-      onClose(); // Close the modal
+      onConfirm(address); // Trigger parent function to open payment modal
+      onClose(); // Close the address modal
     }
   };
 
@@ -45,7 +44,6 @@ const AddressModal = ({ onClose, onConfirm }) => {
           <button className="cart-modal-close" onClick={onClose}>×</button>
           <span className='cart-title'>Адрес доставки</span>
           <div className="adres-body">
-
             <input
               className='adres-input'
               type="text"
@@ -64,8 +62,6 @@ const AddressModal = ({ onClose, onConfirm }) => {
               value={address.entrance}
               onChange={handleChange}
             />
-            {/* {errors.entrance && <p className="error">{errors.entrance}</p>} */}
-
             <input
               className='adres-input-short'
               type="number"
@@ -74,8 +70,6 @@ const AddressModal = ({ onClose, onConfirm }) => {
               value={address.doorCode}
               onChange={handleChange}
             />
-            {/* {errors.doorCode && <p className="error">{errors.doorCode}</p>} */}
-
             <input
               className='adres-input-short'
               type="number"
@@ -84,8 +78,6 @@ const AddressModal = ({ onClose, onConfirm }) => {
               value={address.floor}
               onChange={handleChange}
             />
-            {/* {errors.floor && <p className="error">{errors.floor}</p>} */}
-
             <input
               className='adres-input-short'
               type="number"
@@ -94,8 +86,6 @@ const AddressModal = ({ onClose, onConfirm }) => {
               value={address.apartment}
               onChange={handleChange}
             />
-            {/* {errors.apartment && <p className="error">{errors.apartment}</p>} */}
-
             <input
               className='adres-input comment'
               name="comment"

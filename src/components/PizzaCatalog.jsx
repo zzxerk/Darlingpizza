@@ -400,10 +400,6 @@ function PizzaCatalog({ addToCart }) {
         <CardNumberInput />
         <CardDateInput />
         <CvcInput />
-        <div class="field">
-          <input class="field__input" id="login" placeholder />
-          <label class="field__label" for="login">Логин</label>
-        </div>
       </div>
     </div>
   );

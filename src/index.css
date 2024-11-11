@@ -578,6 +578,21 @@ header {
 
 /* SBER */
 
+.payment-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.payment-container {
+  max-width: 425px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 .card-input-container {
   display: flex;
   align-items: center;
@@ -631,72 +646,50 @@ header {
 
 .cvc-input-container {
   position: relative;
+  padding-bottom: 100px;
 }
 
 .cvc-input {
-  padding: 10px;
+  padding: 18px 16px 0;
+  border: 1px solid rgba(128, 139, 149, .32);
+  border-radius: 8px;
+  height: 64px;
   width: 100%;
-  max-width: 300px;
-  box-sizing: border-box;
+  line-height: 22px;
+  background-color: #fff;
+  background-clip: padding-box;
+  transition: all .12s linear;
+  font-family: "SB Sans Text", "Open Sans", arial, helvetica, sans-serif;
+  font-size: 16px;
   outline: none;
-  border: 1px solid #dbdbdb;
+}
+
+.cvc-input:hover {
+  border: 1px solid #000;
 }
 
 .cvc-label {
   position: absolute;
-  top: 10px;
-  left: 8px;
-  font-size: 14px;
-  padding: 0 5px;
+  top: 22px;
+  left: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #808b95;
+  /* display: inline-block; */
+  margin-bottom: .5rem;
+  transition: ease-in-out 300ms;
+}
+
+.cvc-input:focus,
+.cvc-input:valid {
+  top: -8px;
+  color: #000;
+  background-color: #fff;
+}
+
+.cvc-input:focus+.cvc-label,
+.cvc-input:valid+.cvc-label {
+  top: 12px;
+  font-size: 12px;
   color: #666;
-  transition: 0.3s;
-  pointer-events: none;
-}
-
-.cvc-input:focus+.cvc-label {
-  top: -10px;
-  color: aqua;
-  background-color: #fff;
-}
-
-.cvc-input:not(:placeholder-shown)+.cvc-label {
-  top: -10px;
-  color: rgb(0, 0, 0);
-  background-color: #fff;
-}
-
-.field {
-  position: relative;
-}
-
-.field__input {
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  box-sizing: border-box;
-  outline: none;
-  border: 1px solid #dbdbdb;
-}
-
-.field__label {
-  position: absolute;
-  top: 10px;
-  left: 8px;
-  font-size: 14px;
-  padding: 0 5px;
-  color: #666;
-  transition: 0.3s;
-  pointer-events: none;
-}
-
-.field__input:focus+.field__label {
-  top: -10px;
-  color: aqua;
-  background-color: #fff;
-}
-
-.field__input:not(:placeholder-shown)+.field__label {
-  top: -10px;
-  color: rgb(0, 0, 0);
-  background-color: #fff;
 }
