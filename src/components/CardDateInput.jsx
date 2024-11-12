@@ -24,17 +24,18 @@ const CardDateInput = () => {
   };
 
   return (
-    <div className="expiration-input-container">
-      <label htmlFor="expirationDate" className="expiration-label">Месяц/Год</label>
+    <div className="date-input-container">
       <input
         type="text"
         id="expirationDate"
         value={expirationDate}
         onChange={handleChange}
         maxLength="5" // Limit to MM/YY format
-        className="expiration-input"
-        placeholder="MM/YY"
+        className="date-input"
+        placeholder
+        required
       />
+      <label htmlFor="expirationDate" className="date-label">Месяц/Год</label>
     </div>
   );
 };

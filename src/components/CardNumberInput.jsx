@@ -18,7 +18,6 @@ const CardNumberInput = () => {
 
   return (
     <div className="card-input-container">
-      {/* <label htmlFor="cardNumber" className="card-label">Номер карты</label> */}
       <input
         type="text"
         id="cardNumber"
@@ -26,8 +25,10 @@ const CardNumberInput = () => {
         onChange={handleChange}
         maxLength="19" // Max length to allow spaces (16 digits + 3 spaces)
         className="card-input"
-        placeholder="Номер карты"
+        placeholder
+        required
       />
+      <label htmlFor="cardNumber" className="card-label">Номер карты</label>
       <img src="path/to/mir-logo.png" alt="MIR" className="mir-logo" />
     </div>
   );

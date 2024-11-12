@@ -1,4 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://db.onlinewebfonts.com/c/83b12a31c07f085253263bbd591f5a18?family=SB+Sans+Text+Bold');
+
+@font-face {
+  font-family: "SB Sans";
+  src: url(/public/SB+Sans+Text.ttf);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SB Sans";
+  src: url(/public/SB+Sans+Text+Medium.ttf);
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SB Sans";
+  src: url(/public/SB+Sans+Text+Semibold.ttf);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   margin: 0;
@@ -584,7 +609,8 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
+  z-index: 0;
+  background-color: #f1f2f2;
 }
 
 .payment-container {
@@ -593,63 +619,187 @@ header {
   margin: 0 auto;
 }
 
-.card-input-container {
+.pay-header {
+  padding: 10px 0;
   display: flex;
   align-items: center;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 10px;
-  max-width: 300px;
+  justify-content: space-between;
 }
 
-.card-label {
-  font-size: 12px;
-  color: #757575;
-  margin-right: 10px;
+.pay-logo {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin-right: 12px;
 }
 
-.card-input {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border: none;
-  outline: none;
-  flex-grow: 1;
+.pay-logo>img {
+  height: 22px;
 }
 
-.mir-logo {
-  width: 24px;
-  height: auto;
+.pay-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
 }
 
-.expiration-input-container {
+.order-info {
   display: flex;
   flex-direction: column;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 10px;
-  max-width: 120px;
 }
 
-.expiration-label {
-  font-size: 12px;
-  color: #757575;
+.order-title {
+  font-family: 'SB Sans';
+  letter-spacing: -0.3px;
+  margin-top: -4px;
+  color: rgb(128, 139, 149);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.order-price-box {
+  font-family: 'SB Sans';
+  letter-spacing: -0.3px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.order-price-box>div {
+  width: 100%;
+  font-family: "SB Sans Text Bold";
+  letter-spacing: -0.3px;
+  line-height: 36px;
+  color: rgb(38, 38, 38);
+}
+
+.order-price-rub {
+  width: 100%;
+  font-family: "SB Sans Text Bold";
+  letter-spacing: -0.3px;
+  line-height: 36px;
+  color: rgb(38, 38, 38);
+}
+
+.order-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #808b95;
+  border-radius: 8px;
+}
+
+.message-body {
+  display: flex;
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #e5e7e8;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.banner-icon {
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+
+.message-text {
+  font-family: 'SB Sans';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+  color: rgb(38, 38, 38);
+}
+
+.pay-title {
+  font-family: 'SB Sans';
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.3px;
+  color: rgb(38, 38, 38);
+  line-height: 28px;
   margin-bottom: 4px;
 }
 
-.expiration-input {
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  outline: none;
+.label-body {
+  display: flex;
+  width: 100%;
+  margin: 24px 0;
 }
 
-.cvc-input-container {
+.label-line {
   position: relative;
-  padding-bottom: 100px;
+  flex: 1 1;
 }
 
-.cvc-input {
+.label-line::after {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #dedede;
+  content: "";
+}
+
+.label-text {
+  font-family: 'SB Sans';
+  letter-spacing: -0.3px;
+  font-weight: 500;
+  line-height: 17.5px;
+  padding: 0 20px;
+  color: #888;
+  font-size: 14px;
+}
+
+.pay-body {
+  margin-top: 12px;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.pay-body-inner {
+  margin-right: -8px;
+  margin-left: -8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+}
+
+.pay-inner-title {
+  font-family: 'SB Sans';
+  padding: 0 8px;
+  letter-spacing: -0.3px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgb(38, 38, 38);
+}
+
+.card-num-box {
+  width: 100%;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-bottom: 16px;
+}
+
+
+
+
+
+.card-input-container {
+  position: relative;
+}
+
+.card-input {
+  font-family: 'SB Sans';
   padding: 18px 16px 0;
   border: 1px solid rgba(128, 139, 149, .32);
   border-radius: 8px;
@@ -659,7 +809,127 @@ header {
   background-color: #fff;
   background-clip: padding-box;
   transition: all .12s linear;
-  font-family: "SB Sans Text", "Open Sans", arial, helvetica, sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+
+.card-input:hover {
+  border: 1px solid #000;
+}
+
+.card-label {
+  position: absolute;
+  top: 22px;
+  left: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #808b95;
+  /* display: inline-block; */
+  margin-bottom: .5rem;
+  transition: ease-in-out 150ms;
+  font-family: 'SB Sans';
+  letter-spacing: -0.3px;
+}
+
+.card-input:focus,
+.card-input:valid {
+  top: -8px;
+  color: #000;
+  background-color: #fff;
+}
+
+.card-input:focus+.card-label,
+.card-input:valid+.card-label {
+  top: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.mir-logo {
+  position: absolute;
+  top: 21px;
+  right: 17px;
+
+
+}
+
+
+
+.card-smal-box {
+  display: flex;
+  align-items: flex-end;
+  width: 50%;
+  padding: 0 8px;
+}
+
+.date-input-container {
+  position: relative;
+}
+
+.date-input {
+  font-family: 'SB Sans';
+  letter-spacing: -0.3px;
+  padding: 18px 16px 0;
+  border: 1px solid rgba(128, 139, 149, .32);
+  border-radius: 8px;
+  height: 64px;
+  width: 100%;
+  line-height: 22px;
+  background-color: #fff;
+  background-clip: padding-box;
+  transition: all .12s linear;
+  font-size: 16px;
+  outline: none;
+}
+
+.date-input:hover {
+  border: 1px solid #000;
+}
+
+.date-label {
+  position: absolute;
+  top: 22px;
+  left: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #808b95;
+  /* display: inline-block; */
+  margin-bottom: .5rem;
+  transition: ease-in-out 150ms;
+  font-family: 'SB Sans';
+  letter-spacing: -0.3px;
+  z-index: 0;
+}
+
+.date-input:focus,
+.date-input:valid {
+  top: -8px;
+  color: #000;
+  background-color: #fff;
+}
+
+.date-input:focus+.date-label,
+.date-input:valid+.date-label {
+  top: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.cvc-input-container {
+  position: relative;
+}
+
+.cvc-input {
+  font-family: 'SB Sans';
+  padding: 18px 16px 0;
+  border: 1px solid rgba(128, 139, 149, .32);
+  border-radius: 8px;
+  height: 64px;
+  width: 100%;
+  line-height: 22px;
+  background-color: #fff;
+  background-clip: padding-box;
+  transition: all .12s linear;
   font-size: 16px;
   outline: none;
 }
@@ -677,7 +947,9 @@ header {
   color: #808b95;
   /* display: inline-block; */
   margin-bottom: .5rem;
-  transition: ease-in-out 300ms;
+  transition: ease-in-out 150ms;
+  font-family: 'SB Sans';
+  letter-spacing: -0.3px;
 }
 
 .cvc-input:focus,
